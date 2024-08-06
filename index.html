@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABqlBMVEX1lwUAAAD///+A0mFoykTqQz/vfwLKLkP/4Xf7mwXg4ODkjQUVDQCaXwPxRUFzIR9r0EY5biXjKSjRMEX/0jxBDxasJjj1ggIhQBaE2GQeOxTwhAMoBwfaJyYkRReB0mL/53rzkAQ1VyjqKikpTxrAwMAmJibxiQP/nQX29vZoq097yl3t7e2hoaExMTGQkJBEcDT/2T7Y2NiCUAPPbgHedgJiNAFvFBRyu1Z4QAGkVwEfHx+ZUQFTU1NxcXFQKgFGRkaSpEOLSgHBdwRiPAKXl5dWNQLYhQWxbQRkZGQkEwBcl0ZOgDsdLxYOFwsTHw42IQG1YAEUFBRxPAFiv0BYkEKSITBqGCNlWS9KERk4XCq4uLjGegRwRQI/JwEtHAEcBQVLkjFPmTN7bDm2oVXRuWJmVBjs0G5aFB5/HSr/22HvxTg9dyj/6s/Lr5X/3rv4wZf0rnUxFACSGxqWGxqOKSavIB/JOjazMzA9SR1UXya8ISCDGBcUJg1YEA9IOxHMqDCqjChIPyGei0o3LQ3etzQoIxOOfkONdCF3YhxAOB6qtkbPmieXx1XqYNY7AAAUfElEQVR4nO2diV8bR5aAW8gWbgEOCYfcQAzYBnQgCYNgBAaJxTb3bQ4DMeBgAmyy50yS2d0ZO5nEye7OzP+83V331eputUDN5v1y2PBU9b463quqfqrWGm67aDdtQM3lN8Lwy2+E4ZdaEqaGh+Nx859KMpxK1dCKWhHmtyPeZDs3k88ejQbPWiPCJY98lMyUsqPDAZoSFGF8oDRTiqO/jfoHBDJbGog7VedBAiEcyOeAYaPg7//0z9USWpLLDwRhXNWEqSNqRM78y7/+21AsFisEQWhJ6ajqiVkdYWqgxBj07zEgibmgEE3IgeogqyGM5wc5a8oJi2+oX9Ofv3kzNjbW4k5MzTfzx0rGwXw1c9I/4cCsaEsh0W3iWaJ7F01rer44Nt8sg5z1PyV9EqayYrxbnihAPN9iciaTTc9b5k/Ejsz6HKy+CIfFeD4xXeju16vjI5xJbaHlBV/F9ktfjH4I83zdk1uxxFAwdIRS156/ERivhTDL4xUSie4qR6eS8gseMltzwiPWfU6YvVcjPgCZ1BbnmRpzXn2ON8L4DFPbnNl9sRryAUh9YYypdcZb7PBEyEzA5qmYGf1qzQcYtRaGMV8jwlHagW5uJazofg18EHJxk6r92WgNCFN5hs/qv1jA/tOZUVukg6T7bnRLOEp7GHt8XssA5Rhpj+N2NrokfEn7lxhYfV4vH2CkfY7LwOGKMEW50HLB5rvuDoSSXKBix5KrNY4bwtFnpFTgYG6iA4GYLocYM+jG4bggPCJFTozbfNfmQqWMTdSK9SgIwjzdgTZf9w3yWZKkurGyT61ISM4oyrADb2yEYtGbyGxcqpKQ8jFz8ITiJkcoEtqpzlTwN86Ewzl+hNYFoCnJ5yQyOp+uOhIO43XaJhyhsZsmw6I34WXctiOiE2EcR4mJWH34GFp0DfvUQaf1jQMhAZyEHVhPgKboY24Q1YRkiE7XJ6A5GfGmymGgKgmHcQ9u1SsgHRkHlR5VRZiaDQEgjTirQlQRzoQCkI4aM94Il3hAWZjQtSbNxxGp7u9TisoIYskL4UtXgC3LkfIXXo21F85j3gEXNyObi1JEPFDlp6lSQrybmEKAkpVMEvjqJq+Ay9an3nhsGOg1pe1J9lPSg0YZYZwPEw6AkRZPtupN8MGLt4ZB/fRCWhkJGrKwKCFMoSMZFOhluwkcbce8EMIeNGXBC6COEI7llenoZFwWMySEyMtMQD6ZG03i5YR0bigB0XFZsxdA0kfK5kS7KcleSiREzyWWXQHOe7AUD1Fv7UJcyYlaCY0NcdMvEOJJOK52o3rVgEk/gJtNynbRF5RTUSBEa5kttZfxC3jiBxDPwciJGpByqLOVCFEkxF5GHKPEO3sB1PR5X4ALrgCpZuejIkeIxugmmoSyMTrvB1Br8gNIDK8AaAraEccdCdGpxbhDJNTLfgC1BT+AmNBhDiJN1IQ5J0LkR6ccIiGaGR4BNe3EB6Cmg2XniYulLA4qWTXhMFQpJ9Rj1BIrwL7wZKiGZpRHQNiJxxV70FZF02dYSYhi/XhMPUaBsYsL3rcHura46MpSoTKXy3vslUoqQpRROK32o6gs3Vdiib9Puf8YHqejCkLoZjYTFbqwfkU/Fp0NRYj2TAUnN1Pfon8BGQakhPDo6VUFN1PXkoS7jEEZIYoU2M2Erws1sq7IioQpOAvnwtyFZIWQEwnhLGyuFCnqXdAG5kggzHGRIpxdSCJGjiccgOM3FupZaAvnTrVb1oVkQznLEo7eni7EnTjKEJYCc6S65utEW/e7pJOUNcasTgEh2lRgR+r3KYXe9Obk2NsRqiXJxeOTeR+LebmgBfgwRQij/UT1K1J7E+jpDFXDm0DPTwhUxb2goz4gnOVWpH4HKTrC8YiYhAvmgBDR6nSWEMLTmZNEtX4GH4x5RESncEEhwvLimDAfVKjQ8aMuT4hJfAwXDCJq6DwmfBaQnyFTwCMiPjIMCBGuv58hQhgMy0HsfP0h6gEjJstkmGpkkE4Fs56pB0Tk8V5Cwlxgg9QWjOglLhLEZo/PXKUCh2kOEEJPOlG1J0XGIsRNT48WMaKX51LK0ubxMNXwznA6sAMohHji7fEwQvS+JJIUBr3pkU0IT0kLsUCmoS0A8Y3H4+0vApyIsLmWLEL4UJs8iwliW2EhLnudUMAsr0s+hYDnNIMpkxBOw1eBnpImn7f4mE66ttiy4PXYX2HAGzQRNbTq3gp27+v7VDyo1TdcXWVNwlLw07AeBE7EkkkIouEy7sI6TWDzKsllGBG1FB8NQ3qKyEsShqyUBhelU7eNEEXEUe2oJo7m5gW5miMNLrtjt2waaujILa/BVNnb5mjMTgRgMxpY0ZSDWnbXj8DF96C2za1obg8hWNVs/z8gBAF/8xYSgrV3Tlu65b50ScvyEf+mDQtIUMTPojVNM+7EW7Km0ZrRmgadQ4U6BUMUlPqdI/tD8mTtNvganKadJacY9vd8b/6b2kGITr4nbJ9i4Ef45kjdGrelKdSyQN1NNABOhOk715rDLxRNCT2ZYe/VuT0yQ56QVnFVZR3LEp2p8LKyfujkJZtPM3rbRuoMyqLFWV/8JWVhF5yciAhT6Dc9738H5JNQyvseBJLiCFEX/v6zx1Duh1Pufst1IiKE+SZ/ePwZlLthlfsQkctra4BDFAOGl/DufThQWUKY9vWnW0EIO3GYIYzfekLoSn93Kwg/YZwpOw8jn98CwrsR2TxE+4v3n6FevH/TdvqU+3cvAUqJI0SbxI7vUEBUIV5vdPNa790/dkASPs+7gbvZ+fT9H+7KGM2I+t5psRSsdHyPbfj+wNtH8feBkafJ8ldzm/KtwHj/7ifBmO5avkdVe/0gvjsaEA5I+Ew5/Z5FvP/Hqi32Kt/C0fd77x8dHCCE6n3Fd7TbuQHAyH/8A5D/9PPhLCJ02jj912McPW4CMPK2FciXvj6dBYQDTjqnOEDe9zwVApAHd5A88fV5+6wtRe7ufPgpkifr6Gd4IfcYO5mNJ59ek7y9Q+St+489xETPrPNSfLfl2zutlOBhgfrwc8T3Zev1CUXo6WNvkfV5nE8T6dqhizML3IG/+A504mPozf7M6dWntO50AXO3GzQ4CzcEw1thO8DV+GMY6L8MA6ApO3CeDaBsE4nhOxv2bzoA4edgX/nnkADiDsprcLUmMbwVuK8eZhoehoXwTisweFYDnvSJYLgRNR5JCEeMaEjEeAC8KXza/SlHGO3tDT3hCLAYZpuwfRjttVVCTngInCnMNmEcCAAMPSFwlDkNbu53qBnYC1XCTVgEBpdQtgk1TCGgV0LDlgrVutapoFRZBVofyWroC7LfIERexxWhEc2kV3Z3V9KZqLJm8+dFU2d3pWj/WWE5VZDS+Ggv0Cn2qitbhVzDGn46+umdVr+ERnFkDZYS2RhJS20zMruPkE7k0W5GqhNNj2wgnbWRotR8o7jahQs6TPfKK4OONLJkrrzxm/w23tor3V6sJiN8IJpmFInptnSlRZ3o6jqjs74qtoOR7mILeiQyEttRQ6yIiEYat9OotT8kiQr26tuZMBLZZUs08Hig5JBrWSO9Juisce1gRA/Fgla5YWisiO8Ke8g1upEhLV4Ce3zqmO1ta0VCtkSjKNpuCW2+ER2R6ozQ3WikpTprdDcamYdSpRWqHQxjhfxiFp5ipMjd8pEnRahtINsFwsj6CtbJSDoQmp/BSpIOhOanSWWSDgSyityJEd1V6eDhbDBTJpdCJ1EpOhfjMG3aZvSmUbuLhOZwXila3jq9uhFRy4hdUHGly0EHFJRJyzsZyMZq2ooOxV1VQ1nyyK4sk6YbCrzDBJ6XHrH669RolxHyOrZ8+Pjxhx8/cErsX8/enZ+fvztz1Hn97vzi4i9c2dus0un+Xmdn5x53SMwVdMSdebMvo6RERSjKV+1Pnz79+JXy9z/d6+u712f95yelztlFn/n714719Oy1tbU1Njaa/9lXKuE72zChMtvEPWHkw9ft7e1Pf5C+ozHy+qLvHpK+CzlD87mtw/cgK/uNFh6Qts4ehdYMT6h+vy1LeHAqanTgWn7++qmJ+LWsG98RPpvxnUTntdnDJv3/4qo7RJ3TTsJnISq7kc+nEd5pSORzmvCqTSjxqq2RWPLxqd2Nv/C2X7CAsm78xW6EvnP8g47Gtiu+MroDnbsxzxHCgHFFT174STs/4/GfwF/MKdC5TxXZc2VXeYl/8ION2E67nOazc57PZjw/o8bzX97d4wAv7S66oivb7+T5bEbG5Rzsgf/nOELYapaH2r88ODi4vOps7IwgxMefoScjnXa1nVf7l6aYHg02KdWzNqLJ+PHdr2evX5+d/XQu9B/px/OfziylX9+ZDoYbvPuw5EbLosuDy/2rTqH/EGKbqbOPdNrgiGIJ4Q7jshOJXRiac6cd6E89bahMIKQSMp5+tBHb2/+xD4gCD0IySn3EyV5RZfOVySmRDmptaS7GPiFkrUayp6ymbQ8r/TdEbHdkk+H+6qKiioLMjsv6kCVsbOPn8IFTwQTxf9r9IZKlQBWAmJDtwwZhlNrSGWGkx7lkov2VL0TiXKUOxTUhdHtSTxPp5BHpXuyoVHQnDpY/e0bsu4fD4GlVgI2NoJRtjhAu2q44wkYSUE+vXNSLA+MvH5G/cQl4gUNopYasIGi28NkmaOktELY17l12dBxc7qlcNSs4MjV7Quw7x6HRaa67EliOkG2CGlBAbESrXFfSxsV+d4h0nK9uhJI2FlbeKJe9RyD0JrLAWBFQiPN+pa0TzZOXAiHZ6Nt7Lzvo+5M9r4hUnN/zWScM9524eXMpgZBee592VCPUItFV7KfifOSgqpopx0/e/IjzvMUzrCDkq8qIfc7bXb+yzeZ50+9SDVbsTbEjYm0ATdkeJYS1/K7Fh6+dJiO13a2BuMqJql6aHRD7LuQnHkGJm5yoIEQZ+6kwWCPhcqLWHzyRy0MHeaAUck6qiP1UGOySfFwloiqwxDR0BNj7AJ8r2jlR+Gtr3+wEnND0DQaQBkYK8JuAa97BVb80CWGYWAs+1wmltESkgZGK82+Dr3oHHpCTnKj1ncof814PyZkUN8Vku1uTNCs3OVEBCIXIb4pf1xYQV41v4KlRqlPrDp70HxhEfKy9XqtMQJgTNaPMiYoGI0YGPzH6GQdGaru7Jn3cHUjN4DGbQ05Ub+VCXFXU+wDRoE3x0wu8CO6SPoYPpmKUExWR9GHAdZFneuBA/Af898OAmlEmMCcqAu+JkuVEBVfXCI1IAY4EWw9XK5geg+gGnp3aAVLJLVbs/xH/ebWm+VUZUMmSQ04UbWLURS6TgxjkCTx58rarKNCqTJ0uBHWMSjpokGY19LY8vK4QutAwiun0SjqdzlRO2MoU5S0hybQQk26A5VZlK46VWc/rbYuKDjqoTeMafvgr5ETB0tKHOKStrTr79t5Hdk6UPG2KA5QlPJmVUTlRq4qcqMwqDkDrh2l5g+KpP0PnREW+vNPKD1IquwjIiAOjAbNd+FygqJ0pwuVE7brIiTp0kRO1IauMpNRwOVEPmZwoST5XxE6mkeNFe0k3HfJpSm5yonjbLeGdkbGyLujwuWFGEUdglBNFJQzROVFROruILpHJiTIA3l//ttBdULSsNDEswqV0CaMFSBebEyW2uCVMo1NeDd1YzuZE4Rku60BcItKJpndNE4y/dlsXMCXoI4kRtFoxVIlhdkoXTq5S50RFcWXyFo/Y3YgLqpwTNVLM9EZ72ewiwbTdYsbUAWlKI39fAPdLJQqM0qpVUCaTVjZUxE7AsgtyyolaBwU550SZBfXyBTE5Ucxh1PZaF1vYxHShUNiaXKZ/trG2hoYVvt01MT41wdjGF/Rqyixo6hXzM1OHOastz22Zlc1t0j+jKrNledLUKUwzlQkFZZkT4XhELa/GE+YYtP6dUijgq95MrfEJuZIpc6ig8TmlTrmAKts6USpNxVBBr5Q6/FNuNeFygbI/NilTmSQaltKWwvZxqqDxslxpK5EgjaVoh8kYVVBhWa7knpAuzjZfUmKBUYnJu3GaU5qW6EyMs5UVjkWd5S1WR97orgk3OeOlJU7xOmY78Ae9nO3SduBstysT2mEuJigVNnklB8LpAj16jsmY6TYFm0YzNs+Ny3Ri03RfTxRoHaxUoBlPpmLSypihOimtLLFF93W5MO1EaE7erbmJcrk8MbeFLhkcwrcMDnXDIgvTryydyakC1OnGOv1YZ2vSLmh6K8YX1D8EdWKwsklcmaygqUlTp/xqGleGb3bEBTFWOxNa6lBgYzFXEvajZmOVmJsWoWl8QeyFk0NSne5+r5VpYmVyQpgxNCdMKeGWyG5eQ3JZ5pCoIxTUL9FxU5BwR65QEPLB0vtpeELZlbtCiZKrMvv5dpDdGMqb77cyvtET0E9I76eZYAkVN5l2u9BhzO+W3xfa770guQ7bDv3wnQHcU25wINXMECrvMe2HLoea8w72D6nvQ+1H9ivaADDiyhwK6iYF6SBU8fmlcJM4TgFWuIu238VFrv3ulILSAUrwXU98TpRwJXRo7xNG7+vib6SD4YLcrx/ai72T5GVWDKHw/rzQXpgMByl+MzcmhE/ZyD4hpIToFui8QIjW3kG9X+6GREevHo8LhOjclITEmzbWl6CbyvFXZihClHSC9zBhHKb4NaEDEkL8RUu8QwnfzeV4jM42yAjRTFwel24rQiB6EzrbiUsJ8eH38bh0w1P3ojehnXCpQU6ID7+XQ4lIejDXoCIkpzVb0t1mPYuOVmvsGOUIqSQ+dHQUll5MLjCvC1AS0t8HngRHJ2FA1JNNY8TwowYnQuYrz+Up65A6ode7NC3OR5SAAiGXbdo8MTc33VLPMvaCPZsd4IEEwoZ4LhJeycUFHpHQ4YvrdS8lCY2MsCE+W7mwOpRZsQNVhOZsDN/LIGaEGehIaPZjvmbfwaiBDOal/edIaEFmS/Lbd+tLBktZJV4FQltSw/F6luFUJYCKhKGX3wjDL78Rhl9uP+H/AbinUkxK6x+kAAAAAElFTkSuQmCC">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,300&display=swap" rel="stylesheet">
+<!-- font awsome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav -->
+    <section id="home">
+      <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-image: url(images/zxcv.webp); ">
+      <div class="container">
+        <a class="navbar-brand" href="#" style="margin-left: 30px;"><h2>Feane</h2></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-mdb-target="#navbarCenteredExample" aria-controls="navbarCenteredExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCenteredExample">
+          <ul class="navbar-nav text-center" style="font-family: 'Lato', sans-serif;">
+            <li class="nav-item">
+              <a class="nav-link active text-warning" aria-current="page" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                ABOUT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">BOOK TABLE</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-flex align-items-center" style="font-family: 'Lato', sans-serif;">
+          <!-- Icon -->
+          <a class="text-reset me-3" href="#">
+            <i class="fas fa-shopping-cart text-light"></i>
+          </a>
+          <a class="text-reset me-3" href="#">
+              <i class="fas fa-bell text-light"></i>
+          </a>
+          <a class="text-reset me-3" href="#">
+            <i class="fa-solid fa-magnifying-glass text-light"></i>
+          </a>
+          <a class="text-reset me-3" href="#">
+              <button type="button" class="btn btn-warning text-light">Order Online</button>
+          </a>  
+      </div>
+      </div>
+    </nav>
+    
+   <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators" style="margin-bottom: 150px;">
+        <button style="height: 10px; width: 10px; border-radius: 50%; margin-left: -850px; background-color: yellow;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button style="height: 10px; width: 10px; border-radius: 50%; background-color: yellow;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button style="height: 10px; width: 10px; border-radius: 50%; background-color: yellow;" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div> 
+      <!-- carosal -->
+        <div class="carousel-inner">
+      <div class="carousel-inner">
+            <img src="images/zxcv.webp"
+                class="d-block w-100" alt="img1" style="height: 100vh; width: 100vw; filter: brightness(0.5);">
+               <div class="carousel-item active" style="margin-top: -250px;">
+         
+                  <div class="carousel-caption d-none d-md-block" style="margin-left: -90px; margin-bottom: 10px;" >
+                    <h1 style="text-align: left;">Fast Food Restaurent</h1>
+                    <p style="text-align: left; font-family: 'Shadows Into Light', cursive; font-size: small; margin-right: 490px; margin-left: 10px; margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus minima qui, itaque neque voluptates beatae iste vitae molestias repellendus laboriosam eligendi rerum a laudantium, labore, soluta incidunt ipsa earum.</p>
+                    <button type="button" style="font-family: 'Lato', sans-serif; margin-left: 20px;  border-radius: 25px; width: 150px;" class="btn btn-warning text-light" type="submit">Order Now</button>
+            
+                  </div>
+                </div>
+                <div class="carousel-item" style="margin-top: -250px;">
+                 
+                  <div class="carousel-caption d-none d-md-block" style="margin-left: -90px; margin-bottom: 30px;">
+                    <h1 style="text-align: left;">Fast Food Restaurent</h1>
+                    <p style="text-align: left; font-family: 'Lato', sans-serif; font-size: small; margin-right: 490px; margin-left: 10px; margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus minima qui, itaque neque voluptates beatae iste vitae molestias repellendus laboriosam eligendi rerum a laudantium, labore, soluta incidunt ipsa earum.</p>
+                    <button type="button" style="font-family: 'Lato', sans-serif; margin-left: 20px;  border-radius: 25px; width: 150px;" class="btn btn-warning text-light" type="submit">Order Now</button>
+            
+            
+                    </div>
+                </div>
+                <div class="carousel-item" style="margin-top: -250px;">
+                 
+                  <div class="carousel-caption d-none d-md-block" style="margin-left: -90px; margin-bottom: 30px;">
+                    <h1 style="text-align: left;">Fast Food Restaurent</h1>
+                    <p style="text-align: left; font-family: 'Lato', sans-serif; font-size: small; margin-right: 490px; margin-left: 10px; margin-top: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos necessitatibus minima qui, itaque neque voluptates beatae iste vitae molestias repellendus laboriosam eligendi rerum a laudantium, labore, soluta incidunt ipsa earum.</p>
+                    <button type="button" style="font-family: 'Lato', sans-serif; margin-left: 20px;  border-radius: 25px; width: 150px;" class="btn btn-warning text-light" type="submit">Order Now</button>
+            
+                    </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+    </div>
+  </section> 
+     
+
+<!-- cart -->
+<section class="mt-5 mb-5">
+  <div class="container">
+      <div class="row">
+        <div class="col-2"></div>
+          <div class="col-lg-4 bg-dark me-5">
+              <div class="row">
+                  <div class="col-3">
+                      <img src="images/images (1).jfif" width="100px" height="100px" class="rounded-pill mt-3" alt="">
+                  </div>
+                  <div class="col-9 text-light">
+                      <div class="card-body">
+                          <h5 class="card-title mt-3" style="font-family: 'Shadows Into Light', cursive;" >Tasty Thursdays</h5>
+                          <p class="card-text">20% off</p>
+                          <a href="#" class="btn btn-warning text-light rounded-pill mb-3">Order Now<i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-4 bg-dark">
+              <div class="row">
+                  <div class="col-3">
+                      <img src="images/tyu.jpg" width="100px" height="100px" alt="" class="rounded-pill mt-3">
+                  </div>
+                  <div class="col-9 text-light">
+                      <div class="card-body">
+                          <h5 class="card-title mt-3" style="font-family: 'Shadows Into Light', cursive;">Pizza Days</h5>
+                          <p class="card-text">15% off</p>
+                          <a href="#" class="btn btn-warning text-light rounded-pill mb-3">Order Now<i class="fas fa-cart-shopping"></i></a>
+                        </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!-- list -->
+<section id="" class="book">
+    <h1 class="mt-5 text-center" style=" font-family: 'Dancing Script', cursive; ">Our Menu</h1>
+        <div class=" text-center ">
+          <button class="hovers btn btn-light ms-4 fs-5 rounded-pill" type="submit">All</button>
+          <button class=" hovers btn btn-light ms-4 rounded-pill" type="submit">Burger</button>
+          <button class=" hovers btn btn-light ms-4 rounded-pill" type="submit">Pizza</button>
+          <button class=" hovers btn btn-light ms-4 rounded-pill" type="submit">Pasta</button>
+          <button class="hovers btn btn-light ms-4 rounded-pill" type="submit">Fries</button>
+      </div>
+
+</section>
+  <section id="" class="" style="width: 1000px; text-align: justify; margin-left: 150px;">
+    <div class="row my-4" style="margin-left: 100px;">
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/fire-burger-5k-steak-wallpaper-preview.jpg" class="card-img-top"style="border-bottom-left-radius: 30px;" height="200px">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious burger</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 8</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/images.jfif" class="card-img-top"style="border-bottom-left-radius: 30px;" height="200px">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious burger</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 6</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/food-minimalism-art-burger-wallpaper-preview.jpg" class="card-img-top"style="border-bottom-left-radius: 30px; height: 200px;">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious burger</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 8</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/360_F_560708240_pMZPOuSfvblWGRoaiZFLT4wiFTzQPwQe.jpg" class="card-img-top"style="border-bottom-left-radius: 30px;" height="200px">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious Pizza</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 10</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/download.jfif" class="card-img-top"style="border-bottom-left-radius: 30px;" height="200px">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious Pizza</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 11</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/delicious-pizza-on-the-table-in-a-restaurant-italian-cuisine-generate-ai-photo.jpg" class="card-img-top"style="border-bottom-left-radius: 30px; height: 200px;">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious Pizza</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 8</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/sandwich-4k-download-for-computer-wallpaper-preview.jpg" class="card-img-top"style="border-bottom-left-radius: 30px; height: 200px;">
+          <div class="card-body bg-dark text-light ">
+            <h5 class="card-title">Delicious Sandwitch </h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 18</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/sandwich-4k-for-desktop-wallpaper-preview.jpg" class="card-img-top"style="border-bottom-left-radius: 30px; height: 200px;">
+          <div class="card-body bg-dark text-light ">
+            <h5 class="card-title">Delicious Sandwitch</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 12</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-5 mb-4">
+        <div class="card">
+          <img src="images/download (1).jfif" class="card-img-top" style="border-bottom-left-radius: 30px; height: 200px;">
+          <div class="card-body bg-dark text-light">
+            <h5 class="card-title">Delicious Sandwitch</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content</p>
+            <p>$ 20</p>
+            <a href="#" class="btn like-btn like"><i class="fa-solid fa-cart-shopping text-light"></i></a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-warning text-light " style="margin-left: 370px;">View More</button>
+      </div>
+    </div>
+</section>
+<div class="cardn text-bg-dark w-100">
+  <img src="images/1085778.jpg" class="card-img" alt="..." style="width: 100%; height: 800px;">
+  <div class="card-img-overlay" style="margin-top: 2750px; margin-left: 600px;">
+    <h3 class="card-title" style="font-family: 'Dancing Script', cursive;">We Are Feana</h3>
+    <p class="card-text" style="display: flex;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel cupiditate corrupti voluptatum est, officiis dolores quas quo voluptas ipsum autem. 
+      Facilis accusamus animi maiores rem dolorem reiciendis culpa molestiae aliquam.</p>
+      <button type="button" class="btn btn-warning text-light">Read More..</button>
+  </div>
+</div>
+<section id="" class="book">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="main-text text-start fw-bold display-3 mt-5">
+        <h1><span class="" style="font-family: 'Dancing Script', cursive;">Book A Table</h1>
+      </div>
+      <div class="col-md-6 py-3 py-md-0">
+        <form action="#">
+          <input type="text" class="form-control p-2 border-dark" placeholder="Your Name" required><br>
+          <input type="text" class="form-control p-2 border-dark" placeholder="Phone Number" required><br>
+          <input type="text" class="form-control p-2 border-dark" placeholder="Your Email" required><br>
+          <input type="text" class="form-control p-2 border-dark" placeholder="How many person" required><br>
+          <input type="date" class="form-control p-2 border-dark" placeholder="" required>
+          <br>
+          <button type="button" class="btn btn-warning text-light">Book Now</button> 
+        </form>
+        
+      </div>
+      <div class="col-md-6 mb-5 py-3 py-md-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62865.541959134745!2d76.30948076784672!3d10.008897991861577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c8e94a07a07%3A0x49921cdfae82660!2sKakkanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1705433122857!5m2!1sen!2sin" width="500px" height="300" style="border:0; position: absolute;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+<div id="testimony">
+  <div class="container">
+      <div class="container head mt-5 mb-5">
+          <h1 class="text-center" style="font-family: 'Dancing Script', cursive;">What Says Our Customers</h1>
+      </div>
+      <div class="col-12">
+          <!-- Carousel -->
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+
+                  <!-- Sec1 -->
+                  <div class="carousel-item active" data-bs-interval="3000">
+                      <div class="container d-flex justify-content-center mb-5 bg-dark">
+
+                          <!-- T1 -->
+                          <div class="card1 text-bg-light">
+                              <div class="img-holder1">
+                                  <img src="images/images (2).jfif" class="card-img" alt="offer2">
+                              </div>
+                              <div class="card-overlay">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt
+                                      nulla, laboriosam ea recusandae nisi aliquid. Possimus quas quam mollitia id
+                                      magnam beatae, placeat provident, saepe similique dolore accusantium sed!
+                                  </p>
+                                  <h4>JULIA FERNADUS</h4>
+                                  <p>AMERICA</p>
+                              </div>
+                          </div>
+
+                          <!-- T2 -->
+                          <div class="card1 text-bg-light">
+                              <div class="img-holder1">
+                                  <img src="images/images (3).jfif" class="card-img" alt="offer2">
+                              </div>
+                              <div class="card-overlay">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt
+                                      nulla, laboriosam ea recusandae nisi aliquid. Possimus quas quam mollitia id
+                                      magnam beatae, placeat provident, saepe similique dolore accusantium sed!
+                                  </p>
+                                  <h4>JULIA FERNADUS</h4>
+                                  <p>AMERICA</p>
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+
+                  <!-- Sec2 -->
+                  <div class="carousel-item" data-bs-interval="3000">
+                      <div class="container d-flex justify-content-center mb-5 bg-dark">
+
+                          <!-- T3 -->
+                          <div class="card1 text-bg-light">
+                              <div class="img-holder1">
+                                  <img src="images/un-intday-older-persons.jpg" class="card-img" alt="offer2" width="40px">
+                              </div>
+                              <div class="card-overlay">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt
+                                      nulla, laboriosam ea recusandae nisi aliquid. Possimus quas quam mollitia id
+                                      magnam beatae, placeat provident, saepe similique dolore accusantium sed!
+                                  </p>
+                                  <h4>JULIA FERNADUS</h4>
+                                  <p>AMERICA</p>
+                              </div>
+                          </div>
+
+                          <!-- T4 -->
+                          <div class="card1 text-bg-light">
+                              <div class="img-holder1">
+                                  <img src="images/images (4).jfif" class="card-img" alt="offer2">
+                              </div>
+                              <div class="card-overlay">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit nesciunt
+                                      nulla, laboriosam ea recusandae nisi aliquid. Possimus quas quam mollitia id
+                                      magnam beatae, placeat provident, saepe similique dolore accusantium sed!
+                                  </p>
+                                  <h4>JULIA FERNADUS</h4>
+                                  <p>AMERICA</p>
+                              </div>
+                          </div>
+
+                      </div>
+                  </div>
+
+                      </div>
+                  </div>
+              </div>
+
+              <div class="container text-center btn-holder">
+                  <button id="carousel-btn" type="button"
+                      data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button id="carousel-btn" type="button"
+                      data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                      <span class="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Footer -->
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="" style="background-color: rgb(5, 5, 31); color: aliceblue;">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-3">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="font-family: 'Dancing Script', cursive;">Contact</h6>
+          <p><i class="fas fa-home me-3"></i> Kakkanad, Kochi, India</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+       
+        <!-- Grid column -->
+        <div class="col-lg-6 col-md-12 mb-4 mb-md-0 text-center mt-3">
+          <h5 class="text-uppercase"style="font-family: 'Dancing Script', cursive;">Feana</h5>
+
+          <p style="font-family: 'Shadows Into Light', cursive;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+            molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+            aliquam voluptatem veniam, est atque cumque eum delectus sint!
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-center mt-3">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4" style="font-family: 'Dancing Script', cursive;">
+            Opening Hours
+          </h6>
+          <p style="font-family: 'Dancing Script', cursive;">
+            Everyday
+          </p>
+          <p>
+            10.30 am - 10.30 pm
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        
+      </div>
+      <!-- Grid row -->
+  <!-- Section: Links  -->
+     <div class="text-center text-light">
+
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-facebook-f text-light"></i
+      ></a>
+
+      <!-- Twitter -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-twitter text-light"></i
+      ></a>
+
+      <!-- Google -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-google text-light"></i
+      ></a>
+
+      <!-- Instagram -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-instagram text-light"></i
+      ></a>
+
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-linkedin text-light"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="#!"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="fab fa-github text-light"></i
+      ></a>
+    <!-- Section: Social media -->
+  </div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2020 Copyright:
+    <a class="text-body text-light" href="https://mdbootstrap.com/">keerthana</a>
+  </div>
+  <!-- Copyright -->
+    </div>
+</footer>
+  </section>
+</body>
+</html>
